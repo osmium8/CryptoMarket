@@ -12,7 +12,7 @@ import com.interntask.wiseLeap.ui.overview.ApiStatus
 import com.interntask.wiseLeap.ui.overview.PhotoGridAdapter
 
 /**
- * When there is no Mars property data (data is null), hide the [RecyclerView], otherwise show it.
+ * When there is no data (data is null), hide the [RecyclerView], otherwise show it.
  */
 @BindingAdapter("listData")
 fun bindRecyclerView(recyclerView: RecyclerView, data: List<MarketItem>?) {
@@ -42,7 +42,7 @@ fun bindImage(imgView: ImageView, imgUrl: String?) {
  * displays a broken image to reflect the connection error.  When the request is finished, it
  * hides the image view.
  */
-@BindingAdapter("marsApiStatus")
+@BindingAdapter("ApiStatus")
 fun bindStatus(statusImageView: ImageView, status: ApiStatus?) {
     when (status) {
         ApiStatus.LOADING -> {

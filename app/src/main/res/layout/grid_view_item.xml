@@ -9,7 +9,7 @@
         <import type="android.view.View" />
 
         <variable
-            name="property"
+            name="item"
             type="com.interntask.wiseLeap.network.MarketItem" />
     </data>
 
@@ -51,7 +51,7 @@
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"
                     android:scaleType="centerCrop"
-                    android:text="@{property.symbol}"
+                    android:text="@{item.symbol}"
                     android:textSize="20sp"
                     tools:text="BTC"
                     android:layout_weight="10"/>
@@ -65,8 +65,8 @@
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"
                     android:scaleType="centerCrop"
-                    android:text="@{property.change24h}"
-                    android:textColor="@{property.hasDecreased ? @color/red : @color/green}"
+                    android:text="@{item.change24h}"
+                    android:textColor="@{item.hasDecreased ? @color/red : @color/green}"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     tools:text="BTC"/>

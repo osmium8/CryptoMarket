@@ -13,46 +13,46 @@ class DetailViewModel(marketItem: MarketItem,
                       app: Application) : AndroidViewModel(app) {
 
     // The internal MutableLiveData for the selected property
-    private val _selectedProperty = MutableLiveData<MarketItem>()
+    private val _selectedItem = MutableLiveData<MarketItem>()
 
     // The external LiveData for the SelectedProperty
-    val selectedProperty: LiveData<MarketItem>
-        get() = _selectedProperty
+    val selectedItem: LiveData<MarketItem>
+        get() = _selectedItem
 
     // Initialize the _selectedProperty MutableLiveData
     init {
-        _selectedProperty.value = marketItem
+        _selectedItem.value = marketItem
     }
 
-    val displayTime = Transformations.map(selectedProperty) {
+    val displayTime = Transformations.map(selectedItem) {
         app.applicationContext.getString(R.string.display_time, it.timeString)
     }
 
-    val displayUnconverted = Transformations.map(selectedProperty) {
+    val displayUnconverted = Transformations.map(selectedItem) {
         app.applicationContext.getString(R.string.display_unconverted, it.priceUnconverted)
     }
 
-    val displayVolume24h = Transformations.map(selectedProperty) {
+    val displayVolume24h = Transformations.map(selectedItem) {
         app.applicationContext.getString(R.string.display_volume24h, it.volume24h)
     }
 
-    val displayPrice= Transformations.map(selectedProperty) {
+    val displayPrice= Transformations.map(selectedItem) {
         app.applicationContext.getString(R.string.display_price, it.priceString)
     }
 
-    val displayChange24h = Transformations.map(selectedProperty) {
+    val displayChange24h = Transformations.map(selectedItem) {
         app.applicationContext.getString(R.string.display_change24h, it.change24h)
     }
 
-    val displaySpread = Transformations.map(selectedProperty) {
+    val displaySpread = Transformations.map(selectedItem) {
         app.applicationContext.getString(R.string.display_spread, it.spreadString)
     }
 
-    val displayStatus = Transformations.map(selectedProperty) {
+    val displayStatus = Transformations.map(selectedItem) {
         app.applicationContext.getString(R.string.display_status, it.status)
     }
 
-    val displayExchangeId = Transformations.map(selectedProperty) {
+    val displayExchangeId = Transformations.map(selectedItem) {
         app.applicationContext.getString(R.string.display_exchange_id, it.exchange_id)
     }
 }

@@ -22,8 +22,8 @@ class PhotoGridAdapter( private val onClickListener: OnClickListener ) :
      */
     class MarsPropertyViewHolder(private var binding: GridViewItemBinding):
             RecyclerView.ViewHolder(binding.root) {
-        fun bind(marsProperty: MarketItem) {
-            binding.property = marsProperty
+        fun bind(marketItem: MarketItem) {
+            binding.item = marketItem
             // This is important, because it forces the data binding to execute immediately,
             // which allows the RecyclerView to make the correct view size measurements
             binding.executePendingBindings()
