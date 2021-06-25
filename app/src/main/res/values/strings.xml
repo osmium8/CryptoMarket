@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">CryptoMarket</string>
+<!--    custom strings for transformations : -->
+    <string name="display_exchange_id">Exchange ID : %s</string>
+    <string name="display_price">Price : %s</string>
+    <string name="display_unconverted">Price Unconverted: %s</string>
+    <string name="display_change24h">Change(24 hours) : %s</string>
+    <string name="display_volume24h">Volume(24 hours) : %s</string>
+    <string name="display_status">Status : %s</string>
+    <string name="display_time">Time : %s</string>
+    <string name="display_spread">Spread : %s</string>
+
+</resources>
