@@ -1,5 +1,5 @@
 # CryptoMarket
-#### Android app to fetch cryptocurrency-market data from API(cryptingup.com) [Intern task wiseLeap]
+#### Android app to fetch cryptocurrency-market data from API
 
 * API - https://www.cryptingup.com/api/markets
 * Architecture - MVVM
