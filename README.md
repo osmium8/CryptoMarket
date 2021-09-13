@@ -1,5 +1,5 @@
 # CryptoMarket
-#### Android app to fetch cryptocurrency-market data from API
+#### Android app to fetch cryptocurrency-market data from API following best practices and recommended libraries
 
 * API - https://www.cryptingup.com/api/markets
 * Architecture - MVVM
